@@ -1,6 +1,8 @@
+# Video processing module
+
 import argparse
 from utils import *
-from mod import detect_moving_objects
+from MOD import detect_moving_objects
 import numpy as np
 import cv2
 import imutils

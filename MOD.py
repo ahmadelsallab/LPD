@@ -1,4 +1,4 @@
-
+# Moving Object Detection (MOD) module
 import cv2
 import imutils
 
