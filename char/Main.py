@@ -4,10 +4,14 @@ import cv2
 import numpy as np
 import os
 
+import char.DetectChars as DetectChars
+import char.DetectPlates as DetectPlates
+import char.PossiblePlate as PossiblePlate
+'''
 import DetectChars
 import DetectPlates
 import PossiblePlate
-
+'''
 # module level variables ##########################################################################
 SCALAR_BLACK = (0.0, 0.0, 0.0)
 SCALAR_WHITE = (255.0, 255.0, 255.0)

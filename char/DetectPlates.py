@@ -3,14 +3,23 @@
 import cv2
 import numpy as np
 import math
-import Main
+
 import random
 
+
+import char.Preprocess as Preprocess
+import char.DetectChars as DetectChars
+import char.PossiblePlate as PossiblePlate
+import char.PossibleChar as PossibleChar
+import char.Main as Main
+'''
+
+import Main
 import Preprocess
 import DetectChars
 import PossiblePlate
 import PossibleChar
-
+'''
 # module level variables ##########################################################################
 PLATE_WIDTH_PADDING_FACTOR = 1.3
 PLATE_HEIGHT_PADDING_FACTOR = 1.5
