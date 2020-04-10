@@ -14,7 +14,7 @@ In both approaches, we load HD videos (1080p). Due to the camera position, this 
 
 In both approaches we merge car detection, using background subtraction, to narrow the search space.
 
-For more details, please see [full documentation](doc/DOC.md), and the executable example [notebook](doc/LPD.ipynb)
+For more details, please see [full documentation](doc/DOC.md), and the executable example [notebook](doc/LPD.ipynb), and for all functions and internal code details in one plain notebook, please see this [notebook](doc/doc_code_inside.ipynb)
 
 # Pre-requisites
 
