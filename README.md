@@ -24,6 +24,37 @@ You need to install the packages in `requirements.txt`:
 
 # How to run?
 
+## Usage
+`!python main.py --help`
+
+```
+usage: License Plate Detector (LPD) [-h] [--video_file VIDEO_FILE]
+                                    [--video_output_file VIDEO_OUTPUT_FILE]
+                                    [--frames_cnt FRAMES_CNT]
+                                    [--cars_detection CARS_DETECTION]
+                                    [--show_cars_bbox SHOW_CARS_BBOX]
+                                    [--detect_LP_fn DETECT_LP_FN]
+                                    [--debug DEBUG]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --video_file VIDEO_FILE
+                        the path to the input video
+  --video_output_file VIDEO_OUTPUT_FILE
+                        the path to the output video
+  --frames_cnt FRAMES_CNT
+                        The desired number of frames to process. If None the
+                        whole video is processed.
+  --cars_detection CARS_DETECTION
+                        LPD will work on the car cropped image or whole image.
+  --show_cars_bbox SHOW_CARS_BBOX
+                        0: no cars shown, 1: bbox shown, 2: oriented bbox
+                        shown
+  --detect_LP_fn DETECT_LP_FN
+                        The desired LPD method, 0: char, 1: morphology. If not
+                        passed no LPs are detected.
+  --debug DEBUG         Set to True to see intermediate outputs and debug logs
+```
 You can run over a video, or single image as follows:
 
 ## Video input
