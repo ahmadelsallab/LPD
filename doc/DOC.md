@@ -70,7 +70,7 @@ From command line
 
 
 ```python
-!python main.py --video_file dat/detection_test.mp4 --video_output_file dat/cars_detection.mp4 --show_cars_bbox 1
+!python main.py --video_file dat/detection_test.mp4 --video_output_file dat/cars_detection.mp4 --show_cars_bbox 1 
 ```
 
     OpenCV: FFMPEG: tag 0x47504a4d/'MJPG' is not supported with codec id 7 and format 'mp4 / MP4 (MPEG-4 Part 14)'
@@ -151,7 +151,11 @@ plot_img(detected_img)
 
 
 
+
 ![png](output_12_3.png)
+
+
+![png](output_12_3_1.png)
 
 
 
@@ -177,7 +181,7 @@ From command line:
 
 
 ```python
-!python main.py --video_file dat/detection_test.mp4 --video_output_file dat/cars_detection.mp4 --detect_LP_fn 2
+!python main.py --video_file dat/detection_test.mp4 --video_output_file dat/cars_detection.mp4 --detect_LP_fn 2 --show_cars 1
 ```
 
     OpenCV: FFMPEG: tag 0x47504a4d/'MJPG' is not supported with codec id 7 and format 'mp4 / MP4 (MPEG-4 Part 14)'
@@ -185,6 +189,7 @@ From command line:
     100%|███████████████████████████████████████| 2171/2171 [01:13<00:00, 29.48it/s]
     Video is ready at:  dat/cars_detection.mp4
 
+![git](../imgs/LPD_morpho_with_cars.gif)
 
 We notice the following problems:
 - Many false positives
@@ -252,7 +257,7 @@ From command line:
 
 
 ```python
-!python main.py --video_file dat/detection_test.mp4 --video_output_file dat/cars_detection.mp4 --detect_LP_fn 1
+!python main.py --video_file dat/detection_test.mp4 --video_output_file dat/cars_detection.mp4 --detect_LP_fn 1 --show_cars 1
 ```
 
     OpenCV: FFMPEG: tag 0x47504a4d/'MJPG' is not supported with codec id 7 and format 'mp4 / MP4 (MPEG-4 Part 14)'
@@ -260,6 +265,7 @@ From command line:
     100%|███████████████████████████████████████| 2171/2171 [03:36<00:00, 10.00it/s]
     Video is ready at:  dat/cars_detection.mp4
 
+![git](../imgs/LPD_char_with_cars.gif)
 
 The effect of adding the characters detection feature is clear in filtering out false positive.
 

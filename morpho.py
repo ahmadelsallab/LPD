@@ -63,10 +63,8 @@ def detect_LP_morpho(img, L_min=0, L_max=1000, W_min=0, W_max=1000, debug=False)
 
     
     thresh = preprocess(img)
-    if debug: plot_img(thresh)
-    
+
     edges = cv2.Canny(thresh,100,200)
-    if debug: plot_img(edges)
     
     kernel_sz = 3
     iterations = 2
@@ -75,6 +73,15 @@ def detect_LP_morpho(img, L_min=0, L_max=1000, W_min=0, W_max=1000, debug=False)
     
     
     contours, hierarchy = cv2.findContours(dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE) 
+    
+    if debug:
+        plot_img(thresh)
+        plot_img(edges)
+        plot_img(dilated)
+        img_c = img.copy()
+        cv2.drawContours(img_c, contours, -1, (0, 255, 0), 3) 
+        plot_img(img_c)
+        
     candidates = []
 
     for c in contours:
@@ -99,7 +106,7 @@ def detect_LP_morpho(img, L_min=0, L_max=1000, W_min=0, W_max=1000, debug=False)
                 cv2.putText(img, text, (int(center[0]-L/2), int(center[1]-W/2)), font, scale, color, thickness)
                 #cv2.putText(img, text,  (0,10), font, int(scale), color, int(thickness))
     
-    if debug: plot_img(dilated)
+
         
     #print(rec)
     return img, candidates

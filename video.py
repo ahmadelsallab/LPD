@@ -29,7 +29,9 @@ def process_video(video_file, # The video path to be processed
     if frames_cnt == -1: frames_cnt = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
     # Prepare the output video file
-    fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+    #fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+    
     out = cv2.VideoWriter(video_output_file,fourcc, 20.0, output_video_resolution)
 
     # The min detectable car is a 100x100 rectangle
